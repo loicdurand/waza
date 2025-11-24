@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Button = ({ children, onClick, type = 'button', variant = 'primary', disabled = false, className = '' }) => {
-  const baseStyles = 'px-4 py-2 rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'px-4 py-2 rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-200';
 
   const variantStyles = {
-    primary: 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500',
+    primary: 'bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500',
+    secondary: 'bg-white/20 text-white hover:bg-white/30 focus:ring-gray-300',
     danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
   };
   
