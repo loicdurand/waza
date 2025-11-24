@@ -1,0 +1,66 @@
+import { NavLink, Outlet } from 'react-router-dom';
+import useI18nStore from '../stores/i18nStore';
+
+const Layout = ({ children }) => {
+  const { t } = useI18nStore();
+  const activeLinkStyle = {
+    fontWeight: 'bold',
+    textDecoration: 'underline',
+  };
+
+  return (
+    <div 
+      className="min-h-screen font-sans bg-cover bg-center flex flex-col" // Added flex-col
+      style={{ backgroundImage: "url('/images/rrose-bg.jpg')" }}
+    >
+      {/* Overlay for readability */}
+      <div className="flex-grow bg-black bg-opacity-50 flex flex-col"> {/* Added flex-grow and flex-col */}
+        <header className="bg-white shadow">
+          <nav className="container mx-auto px-6 py-3">
+            <ul className="flex items-center justify-start space-x-6">
+              <li>
+                <h1 className="text-xl font-bold text-gray-800 mr-6">{t('craftPrice')}</h1>
+              </li>
+              <li>
+                <NavLink 
+                  to="/" 
+                  style={({ isActive }) => isActive ? activeLinkStyle : undefined}
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  {t('dashboard')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/materials" 
+                  style={({ isActive }) => isActive ? activeLinkStyle : undefined}
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  {t('materials')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/settings" 
+                  style={({ isActive }) => isActive ? activeLinkStyle : undefined}
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  {t('settings')}
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        {/* Main content area wrapped in a floating card */}
+        <main className="container mx-auto px-6 py-8 flex-grow"> {/* Added flex-grow */}
+          <div className="bg-white rounded-lg shadow-xl p-8 min-h-[calc(100vh-180px)]"> {/* Increased padding, shadow, rounded corners, min-height */}
+            {children}
+            <Outlet />
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
