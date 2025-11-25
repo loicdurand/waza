@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import url("./styles/_colors.scss");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bg-color: var(--grey-9);
+	--theme-color: var(--green-5);
+	--theme-color--hover: var(--green-7);
+	--text-color: var(--green-1);
+	--body-font: "Garamond", sans-serif;
+	--logo-font: serif;
+
+}
+
+@keyframes gradientFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body#root {
+	background: linear-gradient(135deg, #424242 0%, #2a2a2a 50%, #1a1a1a 100%);
+	background-size: 200% 200%;
+	animation: gradientFlow 10s ease infinite;
+	color: var(--text-color);
+	font-family: var(--body-font);
+	/* Pour contraste avec le fond sombre */
+	min-height: 100vh;
+	/* Assure que le fond couvre toute la hauteur */
+	margin: 0;
+	/* Supprime les marges par défaut */
+
+	h3 {
+		font-size: larger;
+	}
+
+	&.no-y-hoverflow {
+		overflow-y: hidden;
+	}
+}

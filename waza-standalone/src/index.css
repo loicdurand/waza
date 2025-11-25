@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "./styles/_colors.scs";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: var(--grey-9);
+  --theme-color: var(--green-5);
+  --theme-color--hover: var(--green-7);
+  --text-color: var(--green-1);
+  --body-font: "Garamond", sans-serif;
+  --logo-font: serif;
+
+}
+
+/* grey-9  */
+body {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  min-height: 100vh;
+  margin: 0;
+  /* background: linear-gradient(135deg, 
+    #0f001f 0%, 
+    #1a0033 40%, 
+    #2d1b4e 70%, 
+    #3f2c6b 90%, 
+    #5c3a8c 100%
+  ),
+  radial-gradient(at 80% 20%, rgba(186, 140, 120, 0.12) 0%, transparent 50%); */
+
+  background: linear-gradient(140deg,
+      #0f0014 0%,
+      #240024 30%,
+      #4f0f4f 55%,
+      #7a1f7a 80%,
+      #c01f9e 100%);
+}
+
+header{
+  border-bottom: 1px solid rgba(255, 120, 220, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 50, 180, 0.2), 0 1px 0 rgba(255, 200, 240, 0.15) inset;
+}
+
+select {
+  color: var(--grey-8);
+  font-weight: 600;
+}

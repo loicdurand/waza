@@ -9,21 +9,21 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div 
+    <div
       className="min-h-screen font-sans bg-cover bg-center flex flex-col" // Added flex-col
       style={{ backgroundImage: "url('/images/rrose-bg.jpg')" }}
     >
       {/* Overlay for readability */}
-      <div className="flex-grow bg-black bg-opacity-60 flex flex-col"> {/* Added flex-grow and flex-col */}
+      <div className="flex-grow bg-opacity-60 flex flex-col"> {/* Added flex-grow and flex-col */}
         <header className="glass">
           <nav className="container mx-auto px-6 py-3">
             <ul className="flex items-center justify-start space-x-6">
               <li>
-                <h1 className="text-xl font-bold text-white mr-6">{t('craftPrice')}</h1>
+                <h1 className="text-xl font-bold text-white mr-6">{t('Waza')}</h1>
               </li>
               <li>
-                <NavLink 
-                  to="/" 
+                <NavLink
+                  to="/"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
                   className="text-white hover:text-gray-300"
                 >
@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/materials" 
+                <NavLink
+                  to="/materials"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
                   className="text-white hover:text-gray-300"
                 >
@@ -40,8 +40,8 @@ const Layout = ({ children }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/settings" 
+                <NavLink
+                  to="/settings"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
                   className="text-white hover:text-gray-300"
                 >

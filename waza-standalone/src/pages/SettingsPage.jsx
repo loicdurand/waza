@@ -50,11 +50,11 @@ const SettingsPage = () => {
             <hr className="my-6" /> {/* Separator */}
 
             <div>
-              <label htmlFor="language-select" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="language-select" className="block text-sm font-medium mb-1">
                 {t('language')}
               </label>
               <select
-                id="language-select"
+                id="language-select" 
                 className="w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 value={language}
                 onChange={handleLanguageChange}

@@ -10,7 +10,7 @@ const MaterialListItem = ({ material, onEdit, onDelete }) => {
     <div className="flex justify-between items-center p-4 border-b border-gray-200">
       <div>
         <p className="font-semibold">{material.name}</p>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-300">
           {`€${unitCost} / ${material.unit}`}
         </p>
       </div>
