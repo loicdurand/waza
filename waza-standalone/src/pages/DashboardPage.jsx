@@ -25,7 +25,7 @@ const DashboardPage = () => {
 
       {models.length === 0 ? (
         <div className="text-center py-12 glass rounded-2xl">
-            <h3 className="text-xl font-semibold text-white">{t('noModelsYet')}</h3>
+            <h3 className="text-xl font-semibold">{t('noModelsYet')}</h3>
             <p className="text-gray-300 mt-2">{t('createModel')}</p> {/* Reusing createModel key */}
         </div>
       ) : (

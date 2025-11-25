@@ -21,7 +21,7 @@ const ModelCard = ({ model, priceDetails }) => {
         
         <Button 
           onClick={() => setShowDetails(!showDetails)} 
-          variant="secondary" 
+          class="secondary" variant="secondary" 
           className="mt-4 w-full"
         >
           {showDetails ? t('hideDetails') : t('showDetails')}
@@ -68,7 +68,7 @@ const ModelCard = ({ model, priceDetails }) => {
 
       <div className="flex space-x-2 mt-6">
           <Link to={`/models/edit/${model.id}`} className="w-full">
-              <Button variant="secondary" className="w-full">{t('edit')}</Button>
+              <Button variant="secondary" className="secondary w-full">{t('edit')}</Button>
           </Link>
           <Button onClick={() => deleteModel(model.id)} variant="danger" className="w-full">
               {t('delete')}

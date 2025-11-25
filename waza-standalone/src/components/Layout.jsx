@@ -21,13 +21,13 @@ const Layout = ({ children }) => {
           <nav className="container mx-auto px-6 py-3">
             <ul className="flex items-center justify-start space-x-6">
               <li>
-                <h1 className="text-xl font-bold text-white mr-6">{t('Waza')}</h1>
+                <h1 className="text-xl font-bold mr-6">{t('Waza')}</h1>
               </li>
               <li>
                 <NavLink
                   to="/"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-600"
+                  className="hover:text-gray-600"
                 >
                   {t('dashboard')}
                 </NavLink>
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
                 <NavLink
                   to="/materials"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-600"
+                  className="hover:text-gray-600"
                 >
                   {t('materials')}
                 </NavLink>
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
                 <NavLink
                   to="/settings"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-600"
+                  className="hover:text-gray-600"
                 >
                   {t('settings')}
                 </NavLink>
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
             </ul>
           </nav>
         </header>
-          <div className="glass p-8 rounded-2xl min-h-[calc(100vh-180px)] text-white"> {/* Increased padding, shadow, rounded corners, min-height */}
+          <div className="big-card glass p-8 rounded-2xl min-h-[calc(100vh-180px)]"> {/* Increased padding, shadow, rounded corners, min-height */}
             {children}
             <Outlet />
           </div>

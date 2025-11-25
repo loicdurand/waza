@@ -15,7 +15,7 @@ const MaterialListItem = ({ material, onEdit, onDelete }) => {
         </p>
       </div>
       <div className="space-x-2">
-        <Button onClick={() => onEdit(material)} variant="secondary">
+        <Button onClick={() => onEdit(material)} class="secondary" variant="secondary">
           {t('edit')}
         </Button>
         <Button onClick={() => onDelete(material.id)} variant="danger">
