@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ children, className = '' }) => {
   return (
-    <div className={`glass ${className}`}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
