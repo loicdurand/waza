@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
     >
       {/* Overlay for readability */}
       <div className="flex-grow bg-opacity-60 flex flex-col"> {/* Added flex-grow and flex-col */}
-        <header className="glass">
+        {/* Main content area wrapped in a floating card */}
+        <main className="container mx-auto px-6 py-8 flex-grow"> {/* Added flex-grow */}
+                  <header className="glass">
           <nav className="container mx-auto px-6 py-3">
             <ul className="flex items-center justify-start space-x-6">
               <li>
@@ -25,7 +27,7 @@ const Layout = ({ children }) => {
                 <NavLink
                   to="/"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-300"
+                  className="text-white hover:text-gray-600"
                 >
                   {t('dashboard')}
                 </NavLink>
@@ -34,7 +36,7 @@ const Layout = ({ children }) => {
                 <NavLink
                   to="/materials"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-300"
+                  className="text-white hover:text-gray-600"
                 >
                   {t('materials')}
                 </NavLink>
@@ -43,7 +45,7 @@ const Layout = ({ children }) => {
                 <NavLink
                   to="/settings"
                   style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-                  className="text-white hover:text-gray-300"
+                  className="text-white hover:text-gray-600"
                 >
                   {t('settings')}
                 </NavLink>
@@ -51,8 +53,6 @@ const Layout = ({ children }) => {
             </ul>
           </nav>
         </header>
-        {/* Main content area wrapped in a floating card */}
-        <main className="container mx-auto px-6 py-8 flex-grow"> {/* Added flex-grow */}
           <div className="glass p-8 rounded-2xl min-h-[calc(100vh-180px)] text-white"> {/* Increased padding, shadow, rounded corners, min-height */}
             {children}
             <Outlet />

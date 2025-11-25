@@ -36,7 +36,7 @@ const MaterialsPage = () => {
     <div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">{t('manageMaterials')}</h2>
-        <Button onClick={handleAddClick} variant="primary">
+        <Button onClick={handleAddClick} className="primary" variant="primary">
           {t('addNewMaterial')}
         </Button>
       </div>

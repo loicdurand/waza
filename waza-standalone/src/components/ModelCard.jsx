@@ -17,7 +17,7 @@ const ModelCard = ({ model, priceDetails }) => {
         <p className="text-2xl font-light mt-2 text-indigo-600">
             {`€${priceDetails.suggestedSellingPrice.toFixed(2)}`}
         </p>
-        <p className="text-sm text-gray-300">{t('suggestedPrice')}</p>
+        <p className="text-sm text-gray-600">{t('suggestedPrice')}</p>
         
         <Button 
           onClick={() => setShowDetails(!showDetails)} 

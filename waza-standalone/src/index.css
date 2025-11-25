@@ -30,20 +30,37 @@ body {
   ),
   radial-gradient(at 80% 20%, rgba(186, 140, 120, 0.12) 0%, transparent 50%); */
 
-  background: linear-gradient(140deg,
-      #0f0014 0%,
-      #240024 30%,
-      #4f0f4f 55%,
-      #7a1f7a 80%,
-      #c01f9e 100%);
+  background-color: #f4f4f4;
+}
+
+main.container{
+        background:url(https://i.pinimg.com/736x/60/63/e9/6063e962ac26080b9117d42d1687c47f.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 5em 2em;
+        position:relative;
 }
 
 header{
   border-bottom: 1px solid rgba(255, 120, 220, 0.3);
   box-shadow: 0 6px 20px rgba(255, 50, 180, 0.2), 0 1px 0 rgba(255, 200, 240, 0.15) inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+main.container .glass{
+  background-color: #ffc6cc;
+  color: #b5505a;
 }
 
 select {
   color: var(--grey-8);
   font-weight: 600;
+}
+
+button.primary{
+  background-color: #b5505a;
+  color: #fff;
 }

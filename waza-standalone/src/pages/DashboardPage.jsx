@@ -19,7 +19,7 @@ const DashboardPage = () => {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">{t('dashboard')}</h2>
         <Link to="/models/new">
-          <Button variant="primary">{t('createModel')}</Button>
+          <Button className="primary" variant="primary">{t('createModel')}</Button>
         </Link>
       </div>
 
